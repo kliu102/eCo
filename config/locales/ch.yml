@@ -1,4 +1,20 @@
 ch:
+  date:
+    month_names:
+      - 一月
+      - 二月
+      - 三月
+      - 四月
+      - 五月
+      - 六月
+      - 七月
+      - 八月
+      - 九月
+      - 十月
+      - 十一月
+      - 十二月
+    formats:
+      default: 默认
   your_cart_is_empty: 您的购物车现在是空的
   activerecord:
     attributes:
@@ -322,6 +338,7 @@ ch:
     add_stock: Add Stock
     add_stock_management: Add Stock Management
     add_to_cart: 加入到购物车
+    go_to_merchant: 转到电商网站购买
     add_variant: Add Variant
     additional_item: Additional Item Cost
     address1: Address

@@ -1,0 +1,39 @@
+<% content_for :subheader do %>
+  <%= render 'slider' %>
+<% end %>
+
+<div id="welcome-message">
+  <div class="container">
+    <h1>
+      欢迎
+      <br>
+      选择 <a href="/products">任何</a> 你喜欢的产品, 我们保证 <a href="/products">服务和质量!</a>
+    </h1>
+  </div>
+</div>
+
+<div class="container">
+  <% if @featured_products %>
+    <div id="featured-products" class="row">
+      <h3>重点推荐</h3>
+      <hr>
+      <ul class="carousel">
+        <% @featured_products.each do |product| %>
+          <%= render 'product', :product => product %>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @latest_products %>
+    <div id="latest-products" class="row">
+      <h3>最新产品</h3>
+      <hr>
+      <ul class="carousel">
+        <% @latest_products.sort_by{ |product| product.created_at }.reverse.each do |product| %>
+          <%= render 'product', :product => product %>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
